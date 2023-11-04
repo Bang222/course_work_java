@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditObservation">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/blue"
+        android:theme="?attr/actionBarTheme">
+        <Button
+            android:id="@+id/backEditObservation"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            style="@style/backGroundButtonSubmit"
+            android:drawableBottom="@drawable/baseline_arrow_back_24"
+            android:textSize="25sp"/>
+        <TextView
+            android:layout_marginStart="12dp"
+            android:layout_width="287dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Edit Observation"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            style="@style/inputCustomStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+                android:text="@string/observation"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/UpdateEditTextObservation"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:autofillHints="Title"
+                android:background="@drawable/rounded_edittext_background"
+                android:hint="@string/title"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/inputCustomStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:focusable="false"
+                android:gravity="left"
+                android:text="Time Of Observation"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/UpdateEditTextTimeOfObservation"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:autofillHints="Name"
+                android:background="@drawable/rounded_edittext_background"
+                android:hint="Time Observation"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/inputCustomStyle"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewCommentObservation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+                android:text="Comments"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/UpdateAddCommentObservation"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:autofillHints="input"
+                android:background="@drawable/rounded_edittext_background"
+                android:gravity="top"
+                android:hint="Comments"
+                android:inputType="textMultiLine"
+                android:lines="5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/UpdateAddNewObservationButton"
+                style="@style/backGroundButtonSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/update" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

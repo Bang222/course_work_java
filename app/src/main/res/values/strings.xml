@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">course_work_java</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add">Add</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="description">Description</string>
+    <string name="description_about_the_hike">Description about the hike...</string>
+    <string name="high">High</string>
+    <string name="difficulylevel">Difficulty Level</string>
+    <string name="_100">100</string>
+    <string name="length_of_the_hike">Length Of The Hike</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="submit">Save as</string>
+    <string name="name_of_the_hike">Name of the hike</string>
+    <string name="location">Location</string>
+    <string name="name">Name</string>
+    <string name="date_of_the_high">Date Of The Hike</string>
+    <string name="date_of_birth">Date Of birth</string>
+    <string name="update">Update</string>
+    <string name="observation">Observation</string>
+    <string name="title">Title</string>
+    <string-array name="DifficultyLevelStatus">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+    </string-array>
+</resources>

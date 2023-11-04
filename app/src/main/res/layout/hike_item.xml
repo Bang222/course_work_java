@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/ButtonDetailHike"
+            android:layout_width="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="Name"
+            android:textColor="@color/black"
+            style="@style/marginEndCustomStyleDetail"
+            android:gravity="center"
+            />
+        <Button
+            android:id="@+id/ButtonMore"
+            style="@style/marginEndCustomStyleMore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="More"
+            android:layout_weight="3"
+            />
+        <Button
+            android:id="@+id/ButtonDelete"
+            style="@style/marginEndCustomStyleDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Delete"
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
