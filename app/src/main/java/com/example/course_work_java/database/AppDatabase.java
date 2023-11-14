@@ -9,7 +9,7 @@ import com.example.course_work_java.daos.ObservationDao;
 import com.example.course_work_java.models.HikeEntity;
 import com.example.course_work_java.models.ObservationEntity;
 
-@Database(entities = {HikeEntity.class, ObservationEntity.class}, version = 1)
+@Database(entities = { HikeEntity.class, ObservationEntity.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract HikeDao hikeDao();
     public abstract ObservationDao observationDao();
