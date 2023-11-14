@@ -18,8 +18,8 @@ public interface HikeDao {
     HikeEntity getHikeById(long hikeId);
     @Update
     void updateHikeById(HikeEntity updatedHike);
-    @Query("SELECT * FROM Hike WHERE name LIKE '%' || :name || '%'")
-    List<HikeEntity> searchHikeByName(String name);
+    @Query("SELECT * FROM Hike WHERE name LIKE '%' || :dataSearch || '%' OR location LIKE '%'|| :dataSearch || '%' OR lengthOfTheHike LIKE '%'|| :dataSearch || '%' OR dateOfTheHike LIKE '%'|| :dataSearch || '%' ")
+    List<HikeEntity> searchHikeByName(String dataSearch);
     @Query("DELETE FROM Hike")
     void deleteAllHikes();
     @Query("DELETE FROM Hike WHERE hikeId = :hikeId")

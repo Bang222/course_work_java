@@ -69,6 +69,13 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+    public void displayDeleteAlert (String title) {
+        new AlertDialog.Builder(homeView.getContext())
+                .setTitle("Notification")
+                .setMessage(
+                        title
+                ).show();
+    }
     public void displayDetailAlert(HikeEntity hike) {
 
         new AlertDialog.Builder(homeView.getContext())
@@ -158,6 +165,8 @@ public class HomeFragment extends Fragment {
                 appDatabase.hikeWithObservationsDao().deleteObservationsByHikeId(hikeId);
                 appDatabase.hikeDao().deleteHikeById(hikeId);
                 RecyclerViewDataUpdate();
+                displayDeleteAlert("Delete Success");
+
             }
         });
         recyclerViewHike.setAdapter(hikeAdapter);

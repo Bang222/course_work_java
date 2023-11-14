@@ -82,10 +82,19 @@ public class AddObservation extends AppCompatActivity {
         buttonAddObservation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validate();
-                submit(hike);
-                customToast("Add Observation Success");
-                resetForm();
+                if(observation.getText().toString().isEmpty()){
+                    customToast("can not null observation");
+                    return;
+                }
+                else if(timeObservation.getText().toString().isEmpty()){
+                    customToast("can not null time Observation");
+                    return;
+                }
+                else {
+                    submit(hike);
+                    customToast("Add Observation Success");
+                    resetForm();
+                }
             }
         });
         timeObservation.setOnClickListener(new View.OnClickListener() {
@@ -134,13 +143,5 @@ public class AddObservation extends AppCompatActivity {
         observation.setText("");
         timeObservation.setText("");
         comments.setText("");
-    }
-    private void validate() {
-        if(observation.getText().toString().isEmpty()){
-            customToast("can not null observation");
-        }
-        if(timeObservation.getText().toString().isEmpty()){
-            customToast("can not null time Observation");
-        }
     }
 }

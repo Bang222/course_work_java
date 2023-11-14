@@ -97,17 +97,19 @@ public class ObservationActivity extends AppCompatActivity {
         ObservationAdapter observationAdapter = new ObservationAdapter(getObservationByHikeId, new OnItemsClickObservation() {
             @Override
             public void onDetailObservationButtonClick(ObservationEntity observation) {
-
+                DetailObservation(observation);
             }
 
             @Override
             public void onEditObservationButtonClick(ObservationEntity observation) {
-
+                String key = "observationDataToUpdate";
+                tranformDataObservation(EditObservation.class,observation,key);
             }
-
             @Override
             public void onDeleteObservationButtonClick(long observationId) {
                 appDatabase.observationDao().deleteObservationById(observationId);
+                customToast("DeleteSuccess");
+                UpdateRecycleViewData(hikeData);
             }
         });
         recycleViewObservation.setAdapter(observationAdapter);

@@ -83,9 +83,18 @@ public class EditObservation extends AppCompatActivity {
         buttonAddObservation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validate();
-                submit(observationData);
-                customToast("Update Observation Success");
+                if(observation.getText().toString().isEmpty()){
+                    customToast("can not null observation");
+                    return;
+                }
+                if(timeObservation.getText().toString().isEmpty()){
+                    customToast("can not null time Observation");
+                    return;
+                }
+                else {
+                    submit(observationData);
+                    customToast("Update Observation Success");
+                }
             }
         });
         timeObservation.setOnClickListener(new View.OnClickListener() {
@@ -128,13 +137,5 @@ public class EditObservation extends AppCompatActivity {
                         message,
                         Toast.LENGTH_SHORT)
                 .show();
-    }
-    private void validate() {
-        if(observation.getText().toString().isEmpty()){
-            customToast("can not null observation");
-        }
-        if(timeObservation.getText().toString().isEmpty()){
-            customToast("can not null time Observation");
-        }
     }
 }

@@ -201,7 +201,7 @@ public class AddFragment extends Fragment {
         setLocation.setText("");
         setDateOfTheHike.setText("");
         setHigh.setText("");
-        setDifficulty.setSelection(2);
+        setDifficulty.setSelection(1);
         setDescription.setText("");
         radioButtonNo.setChecked(false);
         radioButtonYes.setChecked(false);
